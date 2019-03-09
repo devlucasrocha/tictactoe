@@ -138,4 +138,25 @@ const checkWin = _ => {
     if (plays[0][2] === "O" && plays[1][1] === "O" && plays[2][0] === "O") {
         show_message_win("O")
     }
+
+    check_if_tied()
+}
+
+const check_if_tied = _ => {
+    let plays = window.board
+    let contNull = 0;
+    for (let c = 0; c < 3; c++) {
+        for (let k = 0; k < 3; k++) {
+            if (plays[k][c] === null) {
+                contNull++;
+            }
+        }
+    }
+
+    if (contNull === 0) {
+        alert("No one won this round!")
+        location.reload()
+    }
+
+    console.log(`Contnull -> ${contNull}`)
 }
