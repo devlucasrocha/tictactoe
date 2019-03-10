@@ -55,16 +55,19 @@ const checkWin = _ => {
     // 1st Line
     if (plays[0][0] === "X" && plays[0][1] === "X" && plays[0][2] === "X") {
         show_message_win("X")
+        return
     }
 
     // 2nd Line
     if (plays[1][0] === "X" && plays[1][1] === "X" && plays[1][2] === "X") {
         show_message_win("X")
+        return
     }
 
     // 3rd Line
     if (plays[2][0] === "X" && plays[2][1] === "X" && plays[2][2] === "X") {
         show_message_win("X")
+        return
     }
 
     ////////// WINNING OF O PER LINE
@@ -72,16 +75,19 @@ const checkWin = _ => {
     // 1st Line
     if (plays[0][0] === "O" && plays[0][1] === "O" && plays[0][2] === "O") {
         show_message_win("O")
+        return
     }
 
     // 2nd Line
     if (plays[1][0] === "O" && plays[1][1] === "O" && plays[1][2] === "O") {
         show_message_win("O")
+        return
     }
 
     // 3rd Line
     if (plays[2][0] === "O" && plays[2][1] === "O" && plays[2][2] === "O") {
         show_message_win("O")
+        return
     }
 
     ////////// WINNING OF X PER COLUMN
@@ -89,16 +95,19 @@ const checkWin = _ => {
     // 1st Line
     if (plays[0][0] === "X" && plays[1][0] === "X" && plays[2][0] === "X") {
         show_message_win("X")
+        return
     }
 
     // 2nd Line
     if (plays[0][1] === "X" && plays[1][1] === "X" && plays[2][1] === "X") {
         show_message_win("X")
+        return
     }
 
     // 3rd Line
     if (plays[0][2] === "X" && plays[1][2] === "X" && plays[2][2] === "X") {
         show_message_win("X")
+        return
     }
 
     ////////// WINNING OF O PER COLUMN
@@ -106,16 +115,19 @@ const checkWin = _ => {
     // 1st Line
     if (plays[0][0] === "O" && plays[1][0] === "O" && plays[2][0] === "O") {
         show_message_win("O")
+        return
     }
 
     // 2nd Line
     if (plays[0][1] === "O" && plays[1][1] === "O" && plays[2][1] === "O") {
         show_message_win("O")
+        return
     }
 
     // 3rd Line
     if (plays[0][2] === "O" && plays[1][2] === "O" && plays[2][2] === "O") {
         show_message_win("O")
+        return
     }
 
 
@@ -123,20 +135,24 @@ const checkWin = _ => {
 
     if (plays[0][0] === "X" && plays[1][1] === "X" && plays[2][2] === "X") {
         show_message_win("X")
+        return
     }
 
     if (plays[0][2] === "X" && plays[1][1] === "X" && plays[2][0] === "X") {
         show_message_win("X")
+        return
     }
 
     ////// WINNING OF X PER COLUMN
 
     if (plays[0][0] === "O" && plays[1][1] === "O" && plays[2][2] === "O") {
         show_message_win("O")
+        return
     }
 
     if (plays[0][2] === "O" && plays[1][1] === "O" && plays[2][0] === "O") {
         show_message_win("O")
+        return
     }
 
     check_if_tied()
